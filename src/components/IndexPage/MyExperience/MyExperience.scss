@@ -1,0 +1,458 @@
+.MyExperienceMainWrapper {
+    padding: 120px 0;
+    background-color: #080C1A;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+    
+    &.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 5;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 70px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease-out forwards 0.2s;
+      
+      h2 {
+        color: #ffffff;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        text-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+      }
+      
+      .underline {
+        height: 4px;
+        width: 70px;
+        background: linear-gradient(90deg, #FFD700, rgba(255, 215, 0, 0.5));
+        border-radius: 2px;
+        margin: 0 auto 20px;
+      }
+      
+      p {
+        color: #a9a9a9;
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    }
+    
+    .experience-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      margin-bottom: 70px;
+      
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .experience-card {
+      position: relative;
+      background: linear-gradient(145deg, rgba(15, 20, 40, 0.8), rgba(10, 14, 31, 0.9));
+      border-radius: 20px;
+      overflow: hidden;
+      padding: 30px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.4s ease;
+      z-index: 1;
+      opacity: 0;
+      transform: translateY(30px);
+      
+      &.current {
+        animation: fadeInUp 0.7s ease-out forwards 0.4s;
+        border: 1px solid rgba(255, 215, 0, 0.2);
+      }
+      
+      &.previous {
+        animation: fadeInUp 0.7s ease-out forwards 0.6s;
+      }
+      
+      &:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        
+        .card-glow {
+          opacity: 1;
+        }
+        
+        .card-header .company-logo {
+          transform: translateY(-5px);
+          box-shadow: 0 15px 30px rgba(255, 215, 0, 0.2);
+        }
+      }
+      
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 25px;
+        
+        .status-badge {
+          padding: 8px 15px;
+          background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.1));
+          color: #FFD700;
+          font-size: 0.85rem;
+          font-weight: 600;
+          border-radius: 20px;
+          letter-spacing: 0.5px;
+          border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        .company-logo {
+          width: 60px;
+          height: 60px;
+          border-radius: 12px;
+          background: linear-gradient(135deg, #050A30, #091038);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          transition: all 0.3s ease;
+          
+          .logo-placeholder {
+            color: #FFD700;
+            font-size: 1.5rem;
+            font-weight: 700;
+          }
+        }
+      }
+      
+      .card-content {
+        position: relative;
+        z-index: 2;
+        
+        .job-title {
+          color: #ffffff;
+          font-size: 1.6rem;
+          font-weight: 600;
+          margin: 0 0 5px;
+          letter-spacing: 0.5px;
+        }
+        
+        .company-name {
+          color: #FFD700;
+          font-size: 1.2rem;
+          font-weight: 500;
+          margin: 0 0 15px;
+          letter-spacing: 0.5px;
+        }
+        
+        .location {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-bottom: 20px;
+          color: #a9a9a9;
+          font-size: 0.95rem;
+          
+          svg {
+            width: 18px;
+            height: 18px;
+            color: rgba(255, 215, 0, 0.7);
+          }
+        }
+        
+        .divider {
+          height: 1px;
+          background: linear-gradient(to right, transparent, rgba(255, 215, 0, 0.3), transparent);
+          margin: 20px 0;
+        }
+        
+        .job-description {
+          margin-bottom: 25px;
+          
+          p {
+            color: #e6e6e6;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin: 0;
+          }
+        }
+        
+        .key-achievements {
+          margin-bottom: 25px;
+          
+          h5 {
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0 0 15px;
+            position: relative;
+            padding-left: 15px;
+            
+            &::before {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 5px;
+              height: 20px;
+              background: linear-gradient(to bottom, #FFD700, rgba(255, 215, 0, 0.5));
+              border-radius: 3px;
+            }
+          }
+          
+          ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            
+            li {
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+              color: #a9a9a9;
+              font-size: 0.95rem;
+              margin-bottom: 12px;
+              padding-left: 5px;
+              
+              &:last-child {
+                margin-bottom: 0;
+              }
+              
+              svg {
+                width: 16px;
+                height: 16px;
+                min-width: 16px;
+                color: #FFD700;
+                margin-top: 3px;
+              }
+              
+              span {
+                line-height: 1.5;
+              }
+            }
+          }
+        }
+        
+        .tech-stack {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          
+          span {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 215, 0, 0.05));
+            color: #FFD700;
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            transition: all 0.3s ease;
+            
+            &:hover {
+              background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.1));
+              transform: translateY(-2px);
+            }
+          }
+        }
+      }
+      
+      .card-glow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 50% 0%, rgba(255, 215, 0, 0.1), transparent 70%);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        z-index: 0;
+      }
+      
+      &.current {
+        .card-glow {
+          background: radial-gradient(circle at 50% 0%, rgba(255, 215, 0, 0.15), transparent 70%);
+        }
+        
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100px;
+          height: 100px;
+          background: radial-gradient(circle, rgba(255, 215, 0, 0.3), transparent 70%);
+          opacity: 0.5;
+          z-index: 0;
+          border-radius: 50%;
+          filter: blur(20px);
+          animation: floatGlow 8s infinite alternate;
+        }
+      }
+    }
+    
+    .experience-cta {
+      text-align: center;
+      margin-top: 60px;
+      opacity: 0;
+      animation: fadeInUp 0.7s ease-out forwards 0.8s;
+      
+      .contact-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: linear-gradient(135deg, #FFD700, #FFC400);
+        color: #050A30;
+        padding: 15px 35px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+        
+        &::before {
+          content: '';
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 40%);
+          opacity: 0;
+          transition: opacity 0.5s ease;
+        }
+        
+        svg {
+          width: 20px;
+          height: 20px;
+          transition: transform 0.3s ease;
+        }
+        
+        &:hover {
+          transform: translateY(-5px) scale(1.03);
+          box-shadow: 0 15px 35px rgba(255, 215, 0, 0.4);
+          
+          &::before {
+            opacity: 0.8;
+            animation: ripple 1s ease-out;
+          }
+          
+          svg {
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
+    
+    .experience-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      overflow: hidden;
+      
+      .circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 215, 0, 0.03);
+        
+        &.circle-1 {
+          width: 300px;
+          height: 300px;
+          top: -100px;
+          right: 10%;
+          animation: float 15s infinite alternate ease-in-out;
+        }
+        
+        &.circle-2 {
+          width: 500px;
+          height: 500px;
+          bottom: -200px;
+          left: -100px;
+          animation: float 20s infinite alternate-reverse ease-in-out;
+        }
+        
+        &.circle-3 {
+          width: 200px;
+          height: 200px;
+          top: 30%;
+          right: -50px;
+          animation: float 12s infinite alternate ease-in-out;
+        }
+      }
+      
+      .glow {
+        position: absolute;
+        background: radial-gradient(circle, rgba(255, 215, 0, 0.1), transparent 70%);
+        border-radius: 50%;
+        
+        &.glow-1 {
+          width: 600px;
+          height: 600px;
+          top: -300px;
+          right: -200px;
+          opacity: 0.3;
+          filter: blur(50px);
+        }
+        
+        &.glow-2 {
+          width: 400px;
+          height: 400px;
+          bottom: -150px;
+          left: -100px;
+          opacity: 0.2;
+          filter: blur(40px);
+        }
+      }
+    }
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(20px, 20px);
+    }
+  }
+  
+  @keyframes floatGlow {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-20px, 20px);
+    }
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0.5);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
