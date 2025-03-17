@@ -1,8 +1,11 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './Hero.scss';
 
 const Hero = () => {
   const heroRef = useRef(null);
+  const [typedText, setTypedText] = useState('');
+  const fullText = "Software Developer";
+  const [typingComplete, setTypingComplete] = useState(false);
   
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -23,6 +26,27 @@ const Hero = () => {
       }
     };
   }, []);
+  
+  useEffect(() => {
+    // Start typing effect after a delay
+    const typingDelay = setTimeout(() => {
+      let currentIndex = 0;
+      
+      const typingInterval = setInterval(() => {
+        if (currentIndex < fullText.length) {
+          setTypedText(fullText.substring(0, currentIndex + 1));
+          currentIndex++;
+        } else {
+          clearInterval(typingInterval);
+          setTypingComplete(true);
+        }
+      }, 100); // Typing speed (milliseconds per character)
+      
+      return () => clearInterval(typingInterval);
+    }, 1000); // Delay before typing starts
+    
+    return () => clearTimeout(typingDelay);
+  }, []);
 
   return (
     <div className='HeroMainWrapper' ref={heroRef} id="home">
@@ -30,7 +54,10 @@ const Hero = () => {
         <div className="content-section">
           <h4 className="greeting">Hello, I'm</h4>
           <h1 className="name">Mohammed Shamil</h1>
-          <h2 className="position">Software Developer</h2>
+          <h2 className={`position typing-text ${typingComplete ? 'typing-complete' : ''}`}>
+            {typedText}
+            <span className="cursor"></span>
+          </h2>
           <p className="description">
             Passionate about creating elegant solutions to complex problems. 
             Specialized in building modern web applications with clean, 
