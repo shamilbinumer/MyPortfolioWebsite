@@ -94,30 +94,20 @@
       font-weight: 600;
       color: #e6e6e6;
       margin: 0 0 20px;
-      // Remove the original animation for the position element
-      // We'll use our typing animation instead
       display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.5s ease-out forwards 0.6s;
       
       @media (max-width: 768px) {
         font-size: 1.5rem;
       }
       
-      &.typing-text {
-        position: relative;
-        
-        .cursor {
-          display: inline-block;
-          width: 3px;
-          height: 1.5em;
-          background-color: #FFD700;
-          margin-left: 5px;
-          vertical-align: middle;
-          animation: blink 0.7s infinite;
-        }
-        
-        &.typing-complete .cursor {
-          animation: blink 0.7s infinite;
-        }
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 3px;
+        height: 0;
       }
     }
     
@@ -352,15 +342,5 @@
   }
   100% {
     border-radius: 40% 60% 30% 70% / 50% 40% 60% 50%;
-  }
-}
-
-/* New animation for the typing cursor */
-@keyframes blink {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
   }
 }
