@@ -4,6 +4,7 @@ import './Navbar.scss';
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   // Handle scroll effect for navbar
   useEffect(() => {
@@ -12,6 +13,22 @@ const Navbar = () => {
         setScrolled(true);
       } else {
         setScrolled(false);
+      }
+      
+      // Determine which section is currently in view
+      const sections = ['home', 'about', 'projects', 'contacts'];
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // Check if the section is in the viewport
+          // We use a buffer of the element being at least 30% visible
+          if (rect.top <= window.innerHeight * 0.3 && rect.bottom >= window.innerHeight * 0.3) {
+            setActiveSection(section);
+            break;
+          }
+        }
       }
     };
 
@@ -25,20 +42,25 @@ const Navbar = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  // Helper function to check if a section is active
+  const isActive = (section) => {
+    return activeSection === section;
+  };
+
   return (
     <div className={`NavbarMainWrapper ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <div className="logo">
-          <h2>MS</h2>
+          {/* <h2>MS</h2> */}
         </div>
         
         {/* Desktop menu */}
         <nav className="desktop-menu">
           <ul>
-            <li><a href="#home" className="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contacts">Contacts</a></li>
+            <li><a href="#home" className={isActive('home') ? 'active' : ''}>Home</a></li>
+            <li><a href="#about" className={isActive('about') ? 'active' : ''}>About</a></li>
+            <li><a href="#projects" className={isActive('projects') ? 'active' : ''}>Projects</a></li>
+            <li><a href="#contacts" className={isActive('contacts') ? 'active' : ''}>Contacts</a></li>
           </ul>
         </nav>
         
@@ -55,10 +77,10 @@ const Navbar = () => {
       {/* Mobile menu dropdown */}
       <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <ul>
-          <li><a href="#home" onClick={toggleMobileMenu}>Home</a></li>
-          <li><a href="#about" onClick={toggleMobileMenu}>About</a></li>
-          <li><a href="#projects" onClick={toggleMobileMenu}>Projects</a></li>
-          <li><a href="#contacts" onClick={toggleMobileMenu}>Contacts</a></li>
+          <li><a href="#home" className={isActive('home') ? 'active' : ''} onClick={toggleMobileMenu}>Home</a></li>
+          <li><a href="#about" className={isActive('about') ? 'active' : ''} onClick={toggleMobileMenu}>About</a></li>
+          <li><a href="#projects" className={isActive('projects') ? 'active' : ''} onClick={toggleMobileMenu}>Projects</a></li>
+          <li><a href="#contacts" className={isActive('contacts') ? 'active' : ''} onClick={toggleMobileMenu}>Contacts</a></li>
         </ul>
       </div>
     </div>
