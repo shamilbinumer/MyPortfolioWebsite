@@ -1,6 +1,6 @@
 .ProjectsMainWrapper {
   padding: 120px 0;
-  background-color: #080808;
+  background-color: #030e1f; // Darker blue-black
   position: relative;
   overflow: hidden;
   opacity: 0;
@@ -19,8 +19,8 @@
     width: 100%;
     height: 100%;
     background-image: 
-      linear-gradient(rgba(255, 0, 0, 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 0, 0, 0.05) 1px, transparent 1px);
+      linear-gradient(rgba(94, 114, 228, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(94, 114, 228, 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
     opacity: 0.3;
     z-index: 0;
@@ -43,7 +43,7 @@
     
     .section-subtitle {
       display: inline-block;
-      color: #FF0000;
+      color: #5e72e4; // Blue
       font-size: 1rem;
       font-weight: 500;
       text-transform: uppercase;
@@ -57,7 +57,7 @@
         top: 50%;
         width: 30px;
         height: 1px;
-        background-color: rgba(255, 0, 0, 0.4);
+        background-color: rgba(94, 114, 228, 0.4); // Blue with opacity
       }
       
       &::before {
@@ -79,7 +79,7 @@
     .underline {
       height: 4px;
       width: 60px;
-      background: linear-gradient(to right, #FF0000, rgba(255, 0, 0, 0.5));
+      background: linear-gradient(to right, #5e72e4, rgba(94, 114, 228, 0.5)); // Blue gradient
       border-radius: 2px;
       margin: 0 auto 20px;
     }
@@ -104,7 +104,7 @@
       display: inline-flex;
       gap: 10px;
       padding: 5px;
-      background: rgba(30, 30, 30, 0.6);
+      background: rgba(30, 30, 45, 0.6); // Darker blue-gray
       border-radius: 30px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.05);
@@ -121,13 +121,13 @@
         transition: all 0.3s ease;
         
         &:hover {
-          color: #FF0000;
+          color: #5e72e4; // Blue
         }
         
         &.active {
-          background: linear-gradient(135deg, #FF0000, #cc0000);
+          background: linear-gradient(135deg, #5e72e4, #324cdd); // Blue gradient
           color: white;
-          box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+          box-shadow: 0 4px 10px rgba(94, 114, 228, 0.3); // Blue shadow
         }
       }
     }
@@ -148,7 +148,7 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      background: linear-gradient(145deg, #101010, #1a1a1a);
+      background: linear-gradient(145deg, #071326, #0d1e35); // Dark blue gradient
       border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -181,7 +181,7 @@
       &.active, &:hover {
         transform: translateY(-15px);
         box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-        border-color: rgba(255, 0, 0, 0.3);
+        border-color: rgba(94, 114, 228, 0.3); // Blue border
         
         &::before {
           opacity: 1;
@@ -198,7 +198,7 @@
           opacity: 1;
           
           h3 {
-            color: #FF0000;
+            color: #5e72e4; // Blue
           }
           
           .tech-stack {
@@ -241,7 +241,7 @@
           opacity: 0;
           
           .project-tech-badge {
-            background: rgba(255, 0, 0, 0.9);
+            background: rgba(94, 114, 228, 0.9); // Blue with opacity
             color: white;
             padding: 6px 12px;
             font-size: 0.8rem;
@@ -292,16 +292,16 @@
           transition: all 0.3s ease 0.1s;
           
           span {
-            background-color: rgba(255, 0, 0, 0.1);
-            color: #FF0000;
+            background-color: rgba(94, 114, 228, 0.1); // Blue with opacity
+            color: #5e72e4; // Blue
             font-size: 0.75rem;
             padding: 5px 12px;
             border-radius: 12px;
-            border: 1px solid rgba(255, 0, 0, 0.2);
+            border: 1px solid rgba(94, 114, 228, 0.2); // Blue border
             transition: all 0.3s ease;
             
             &:hover {
-              background-color: rgba(255, 0, 0, 0.2);
+              background-color: rgba(94, 114, 228, 0.2); // Blue with opacity
               transform: translateY(-2px);
             }
           }
@@ -316,7 +316,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: linear-gradient(135deg, #FF0000, #cc0000);
+            background: linear-gradient(135deg, #5e72e4, #324cdd); // Blue gradient
             color: white;
             font-size: 0.9rem;
             font-weight: 500;
@@ -324,7 +324,7 @@
             border-radius: 25px;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(94, 114, 228, 0.2); // Blue shadow
             
             svg {
               transition: transform 0.3s ease;
@@ -332,7 +332,7 @@
             
             &:hover {
               transform: translateY(-3px);
-              box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3);
+              box-shadow: 0 8px 20px rgba(94, 114, 228, 0.3); // Blue shadow
               
               svg {
                 transform: translate(2px, -2px);
@@ -341,7 +341,7 @@
             
             &:active {
               transform: translateY(-1px);
-              box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
+              box-shadow: 0 4px 10px rgba(94, 114, 228, 0.2); // Blue shadow
             }
           }
         }
@@ -353,7 +353,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(145deg, #101010, #1a1a1a);
+    background: linear-gradient(145deg, #071326, #0d1e35); // Dark blue gradient
     padding: 40px 50px;
     border-radius: 16px;
     margin-top: 30px;
@@ -379,7 +379,7 @@
       left: 0;
       width: 100%;
       height: 5px;
-      background: linear-gradient(to right, #FF0000, transparent);
+      background: linear-gradient(to right, #5e72e4, transparent); // Blue gradient
     }
     
     .more-projects-content {
@@ -401,13 +401,13 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: rgba(255, 0, 0, 0.1);
-      color: #FF0000;
+      background: rgba(94, 114, 228, 0.1); // Blue with opacity
+      color: #5e72e4; // Blue
       padding: 12px 25px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: 500;
-      border: 1px solid rgba(255, 0, 0, 0.3);
+      border: 1px solid rgba(94, 114, 228, 0.3); // Blue border
       transition: all 0.3s ease;
       white-space: nowrap;
       
@@ -416,7 +416,7 @@
       }
       
       &:hover {
-        background-color: rgba(255, 0, 0, 0.2);
+        background-color: rgba(94, 114, 228, 0.2); // Blue with opacity
         transform: translateY(-3px);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         
@@ -436,7 +436,7 @@
     &.circle-1 {
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, rgba(255, 0, 0, 0.2) 0%, rgba(255, 0, 0, 0) 70%);
+      background: radial-gradient(circle, rgba(94, 114, 228, 0.2) 0%, rgba(94, 114, 228, 0) 70%); // Blue with opacity
       top: -100px;
       right: -100px;
     }
@@ -444,7 +444,7 @@
     &.circle-2 {
       width: 400px;
       height: 400px;
-      background: radial-gradient(circle, rgba(255, 0, 0, 0.15) 0%, rgba(255, 0, 0, 0) 70%);
+      background: radial-gradient(circle, rgba(94, 114, 228, 0.15) 0%, rgba(94, 114, 228, 0) 70%); // Blue with opacity
       bottom: -100px;
       left: -100px;
     }

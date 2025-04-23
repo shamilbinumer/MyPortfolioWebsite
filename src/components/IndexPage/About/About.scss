@@ -1,6 +1,6 @@
 .AboutMainWrapper {
   padding: 100px 0;
-  background-color: #0A0A0A; /* Darker black for contrast with the hero section */
+  background-color: #05101c; /* Darker blue-black for contrast with the hero section */
   position: relative;
   overflow: hidden;
   opacity: 0;
@@ -48,7 +48,7 @@
       
       .circle {
         fill: none;
-        stroke: rgba(255, 0, 0, 0.1); /* Red with opacity */
+        stroke: rgba(94, 114, 228, 0.1); /* Blue with opacity */
         stroke-width: 2;
         stroke-dasharray: 1260;
         stroke-dashoffset: 1260;
@@ -57,7 +57,7 @@
       
       .bracket {
         fill: none;
-        stroke: #FF0000; /* Red */
+        stroke: #5e72e4; /* Blue */
         stroke-width: 4;
         stroke-linecap: round;
         stroke-linejoin: round;
@@ -97,7 +97,7 @@
       }
       
       .design-elements circle {
-        fill: rgba(255, 0, 0, 0.6); /* Red with opacity */
+        fill: rgba(94, 114, 228, 0.6); /* Blue with opacity */
         transform-origin: center;
         transform: scale(0);
         animation: popIn 0.5s ease-out forwards;
@@ -142,7 +142,7 @@
       .underline {
         height: 4px;
         width: 70px;
-        background-color: #FF0000; /* Red */
+        background-color: #5e72e4; /* Blue */
         border-radius: 2px;
       }
     }
@@ -189,7 +189,7 @@
               
               .skill-level {
                 height: 100%;
-                background: linear-gradient(to right, #1A1A1A, #FF0000); /* Black to red gradient */
+                background: linear-gradient(to right, #0a1a33, #5e72e4); /* Dark blue to blue gradient */
                 border-radius: 4px;
                 transform: translateX(-100%);
                 animation: slideRight 1.5s ease-out forwards 0.8s;

@@ -3,14 +3,14 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #000000; // Black
+  background-color: #020d1f; // Dark blue-black
   color: #f5f5f5; // Light text
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transition: all 0.3s ease;
 
   &.scrolled {
-    background-color: rgba(0, 0, 0, 0.8); // Black with opacity
+    background-color: rgba(2, 13, 31, 0.8); // Dark blue-black with opacity
     backdrop-filter: blur(20px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
@@ -27,7 +27,7 @@
 
   .logo {
     h2 {
-      color: #FF0000; // Red
+      color: #5e72e4; // Blue
       margin: 0;
       font-weight: 700;
       letter-spacing: 1px;
@@ -58,7 +58,7 @@
           transition: all 0.3s ease;
 
           &:hover, &.active {
-            color: #FF0000; // Red
+            color: #5e72e4; // Blue
 
             &:after {
               width: 100%;
@@ -72,7 +72,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: #FF0000; // Red
+            background-color: #5e72e4; // Blue
             transition: width 0.3s ease;
           }
         }
@@ -98,7 +98,7 @@
         position: absolute;
         height: 2px;
         width: 100%;
-        background: #FF0000; // Red
+        background: #5e72e4; // Blue
         border-radius: 2px;
         opacity: 1;
         left: 0;
@@ -139,7 +139,7 @@
   }
 
   .mobile-menu {
-    background-color: #1A1A1A; // Dark gray, almost black
+    background-color: #0a1a33; // Darker blue
     position: absolute;
     top: 70px;
     left: 0;
@@ -164,7 +164,7 @@
       margin: 0;
 
       li {
-        border-top: 1px solid rgba(51, 51, 51, 0.5); // Dark gray with opacity
+        border-top: 1px solid rgba(94, 114, 228, 0.2); // Blue with opacity
 
         a {
           display: block;
@@ -175,8 +175,8 @@
           transition: all 0.3s ease;
 
           &:hover {
-            background-color: rgba(255, 0, 0, 0.1); // Red with opacity
-            color: #FF0000; // Red
+            background-color: rgba(94, 114, 228, 0.1); // Blue with opacity
+            color: #5e72e4; // Blue
             padding-left: 25px;
           }
         }

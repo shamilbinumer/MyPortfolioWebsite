@@ -27,14 +27,20 @@ const MyService = () => {
   return (
     <div className='MyServiceMainWrapper' id="services" ref={servicesRef}>
       <div className="service-bg-overlay"></div>
+      <div className="service-shapes">
+        <div className="shape shape-1"></div>
+        <div className="shape shape-2"></div>
+      </div>
+      
       <div className="container">
         <div className="section-header">
+          <span className="section-subtitle">What I Offer</span>
           <h2>My Services</h2>
           <div className="underline"></div>
-          <p>Professional solutions tailored to your needs</p>
+          <p>Professional solutions tailored to your unique requirements</p>
         </div>
         
-        <div className="services-container">
+        <div className="services-grid">
           <div className="service-card">
             <div className="service-icon-wrapper">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="service-icon">
@@ -58,6 +64,7 @@ const MyService = () => {
                 <span>MongoDB</span>
                 <span>Express</span>
               </div>
+              <a href="#contacts" className="service-btn">Get Started</a>
             </div>
           </div>
           
@@ -82,9 +89,65 @@ const MyService = () => {
               </ul>
               <div className="tech-stack">
                 <span>Figma</span>
-                {/* <span>Adobe XD</span> */}
-                {/* <span>Sketch</span> */}
+                <span>Adobe XD</span>
+                <span>Sketch</span>
               </div>
+              <a href="#contacts" className="service-btn">Get Started</a>
+            </div>
+          </div>
+          
+          <div className="service-card">
+            <div className="service-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="service-icon">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+            </div>
+            <div className="service-content">
+              <h3>Mobile App Development</h3>
+              <p>Building native and cross-platform mobile applications that deliver exceptional user experiences.</p>
+              <ul className="service-features">
+                <li>iOS & Android development</li>
+                <li>Cross-platform solutions</li>
+                <li>App store optimization</li>
+                <li>Performance optimization</li>
+                <li>Maintenance & support</li>
+              </ul>
+              <div className="tech-stack">
+                <span>React Native</span>
+                <span>Flutter</span>
+                <span>Swift</span>
+                <span>Kotlin</span>
+              </div>
+              <a href="#contacts" className="service-btn">Get Started</a>
+            </div>
+          </div>
+          
+          <div className="service-card">
+            <div className="service-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="service-icon">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <div className="service-content">
+              <h3>Digital Marketing</h3>
+              <p>Strategic digital marketing services that help businesses grow their online presence and reach target audiences.</p>
+              <ul className="service-features">
+                <li>SEO optimization</li>
+                <li>Social media marketing</li>
+                <li>Content strategy</li>
+                <li>Email campaigns</li>
+                <li>Analytics & reporting</li>
+              </ul>
+              <div className="tech-stack">
+                <span>Google Analytics</span>
+                <span>SEMrush</span>
+                <span>Mailchimp</span>
+                <span>HubSpot</span>
+              </div>
+              <a href="#contacts" className="service-btn">Get Started</a>
             </div>
           </div>
         </div>
@@ -94,11 +157,17 @@ const MyService = () => {
             <h3>Need a custom solution?</h3>
             <p>Let's discuss how I can help bring your ideas to life</p>
           </div>
-          <a href="#contacts" className="cta-button">Get in Touch</a>
+          <a href="#contacts" className="cta-button">
+            Get in Touch
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="arrow-icon">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   );
 };
 
-export default MyService; 
+export default MyService;
