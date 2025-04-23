@@ -1,4 +1,4 @@
-// Preloader SCSS that matches the site's red and black theme
+// Preloader SCSS that matches the site's blue and dark theme
 
 .preloader {
     position: fixed;
@@ -6,7 +6,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: #000000;
+    background-color: #020d1f; // Dark blue-black background
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,23 +53,23 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            background: #FF0000;
-            box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.7);
+            background: #5e72e4; // Blue
+            box-shadow: 0 0 20px 5px rgba(94, 114, 228, 0.7); // Blue glow
           }
         }
         
         .circle-1 {
-          border-top: 2px solid rgba(255, 0, 0, 0.8);
+          border-top: 2px solid rgba(94, 114, 228, 0.8); // Blue border
           animation: circle1 4s linear infinite;
         }
         
         .circle-2 {
-          border-right: 2px solid rgba(255, 0, 0, 0.6);
+          border-right: 2px solid rgba(94, 114, 228, 0.6); // Blue border
           animation: circle2 4s linear infinite;
         }
         
         .circle-3 {
-          border-bottom: 2px solid rgba(255, 0, 0, 0.4);
+          border-bottom: 2px solid rgba(94, 114, 228, 0.4); // Blue border
           animation: circle3 4s linear infinite;
         }
       }
@@ -100,17 +100,17 @@
       font-size: 1.8rem;
       font-weight: 700;
       color: #ffffff;
-      text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+      text-shadow: 0 0 10px rgba(94, 114, 228, 0.5); // Blue shadow
       letter-spacing: 2px;
     }
     
     &__dots {
       span {
         display: inline-block;
-        color: #FF0000;
+        color: #5e72e4; // Blue
         font-size: 2rem;
         line-height: 1;
-        text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        text-shadow: 0 0 10px rgba(94, 114, 228, 0.5); // Blue shadow
         animation: dots 1.5s infinite;
         
         &:nth-child(2) {
@@ -134,9 +134,9 @@
     &__progress-bar {
       height: 100%;
       width: 0;
-      background: linear-gradient(to right, #FF0000, #ff5e5e);
+      background: linear-gradient(to right, #5e72e4, #7895ff); // Blue gradient
       border-radius: 4px;
-      box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+      box-shadow: 0 0 10px rgba(94, 114, 228, 0.5); // Blue shadow
       animation: progress 3s ease-in-out forwards;
     }
     
@@ -148,7 +148,7 @@
       height: 100%;
       z-index: 1;
       
-      // Particle background similar to your theme
+      // Particle background matching blue theme
       &::before {
         content: '';
         position: absolute;
@@ -157,14 +157,14 @@
         width: 100%;
         height: 100%;
         background-image: 
-          radial-gradient(rgba(255, 0, 0, 0.15) 1px, transparent 1px),
+          radial-gradient(rgba(94, 114, 228, 0.15) 1px, transparent 1px),
           radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
         background-size: 50px 50px, 25px 25px;
         background-position: 0 0, 12.5px 12.5px;
         opacity: 0.08;
       }
       
-      // Gradient overlay similar to your theme
+      // Gradient overlay matching blue theme
       &::after {
         content: '';
         position: absolute;
@@ -173,8 +173,8 @@
         width: 100%;
         height: 100%;
         background: 
-          radial-gradient(circle at 20% 30%, rgba(255, 0, 0, 0.15) 0%, transparent 50%),
-          radial-gradient(circle at 80% 70%, rgba(255, 0, 0, 0.1) 0%, transparent 40%);
+          radial-gradient(circle at 20% 30%, rgba(94, 114, 228, 0.15) 0%, transparent 50%),
+          radial-gradient(circle at 80% 70%, rgba(94, 114, 228, 0.1) 0%, transparent 40%);
       }
     }
   }
@@ -182,7 +182,7 @@
   // Floating particles
   .particle {
     position: absolute;
-    background: rgba(255, 0, 0, 0.5);
+    background: rgba(94, 114, 228, 0.5); // Blue particles
     border-radius: 50%;
     filter: blur(20px);
     
